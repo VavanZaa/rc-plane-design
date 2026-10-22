@@ -1,0 +1,141 @@
+{
+  "project": "V-201",
+  "phase": 3,
+  "mass_budget": {
+    "component_mass_g": 400.0,
+    "printed_airframe_target_g": 350.0,
+    "printed_airframe_min_g": 300.0,
+    "printed_airframe_max_g": 400.0,
+    "design_auw_g": 800.0
+  },
+  "propulsion": {
+    "motor": "2212 brushless, 1000 KV",
+    "esc_current_a": 30.0,
+    "battery": "3S 2200 mAh",
+    "initial_test_propeller": "9x6",
+    "minimum_static_thrust_g": 600.0,
+    "target_static_thrust_g": 700.0
+  },
+  "operating_conditions": {
+    "air_density_kg_m3": 1.225,
+    "cruise_speed_m_s": 13.0,
+    "takeoff_target_speed_m_s": 6.8,
+    "gravity_m_s2": 9.80665
+  },
+  "reference": {
+    "coordinate_system": "X aft, Y right semispan, Z up",
+    "wing_mount": "high-wing",
+    "wing_root_le_x_mm": 230.0,
+    "wing_root_z_mm": 55.0,
+    "cg_aft_of_root_le_mm": 63.0
+  },
+  "wing": {
+    "span_mm": 1400.0,
+    "quarter_chord_aligned": true,
+    "center_panel_dihedral_deg": 0.0,
+    "dihedral_break_y_mm": 500.0,
+    "outer_panel_dihedral_deg": 12.0,
+    "outer_panel_dihedral_optimization_bounds_deg": [10.0, 14.0],
+    "aileron_start_mm": 350.0,
+    "aileron_end_mm": 650.0,
+    "aileron_hinge_fraction": 0.75,
+    "stations": [
+      {"y_mm": 0.0, "chord_mm": 250.0, "twist_deg": 0.0, "airfoil": "naca2414"},
+      {"y_mm": 175.0, "chord_mm": 245.0, "twist_deg": -0.2, "airfoil": "naca2414"},
+      {"y_mm": 350.0, "chord_mm": 230.0, "twist_deg": -0.7, "airfoil": "naca2414"},
+      {"y_mm": 525.0, "chord_mm": 195.0, "twist_deg": -1.3, "airfoil": "naca2413"},
+      {"y_mm": 650.0, "chord_mm": 159.285714, "twist_deg": -1.8, "airfoil": "naca2412"},
+      {"y_mm": 700.0, "chord_mm": 145.0, "twist_deg": -2.0, "airfoil": "naca2412"}
+    ],
+    "servo": {
+      "model": "MG90S",
+      "station_y_mm": 350.0,
+      "body_height_mm": 28.5,
+      "required_gross_section_depth_mm": 31.5,
+      "available_gross_section_depth_mm": 32.2
+    },
+    "structure": {
+      "spar_count": 2,
+      "arrangement": "parallel spanwise, centered on aircraft",
+      "carbon_member_outer_mm": 6.0,
+      "carbon_member_inner_mm": 4.0,
+      "carbon_member_length_mm": 1000.0,
+      "constant_global_x": true,
+      "forward_spar_centerline_x_mm": 292.5,
+      "rear_spar_centerline_x_mm": 380.0,
+      "forward_spar_centerline_z_mm": 55.0,
+      "rear_spar_centerline_z_mm": 57.0,
+      "forward_spar_root_chord_fraction": 0.25,
+      "rear_spar_root_chord_fraction": 0.60,
+      "covered_semispan_mm": 500.0,
+      "unsupported_tip_length_each_side_mm": 200.0
+    }
+  },
+  "wing_fuselage_interface": {
+    "type": "removable conformal high-wing saddle",
+    "center_section_material": "PETG or standard PLA; do not use LW-PLA for hardpoints",
+    "center_section_half_width_mm": 45.0,
+    "saddle_contact_half_width_mm": 34.0,
+    "saddle_root_airfoil": "naca2414",
+    "saddle_incidence_deg": 0.0,
+    "spar_support_bulkheads": {
+      "count": 2,
+      "aligned_with_spar_centerline_x_mm": [292.5, 380.0],
+      "aligned_with_spar_centerline_z_mm": [55.0, 57.0],
+      "minimum_thickness_mm": 2.4,
+      "material": "PETG or standard PLA"
+    },
+    "fasteners": {
+      "count": 4,
+      "thread": "M3",
+      "preferred_bolt_material": "nylon sacrificial bolts for initial flights",
+      "clearance_hole_mm": 3.3,
+      "compression_sleeve_outer_mm": 8.0,
+      "compression_sleeve_inner_mm": 3.3,
+      "hardpoint_boss_outer_mm": 10.0,
+      "minimum_washer_outer_mm": 9.0,
+      "positions_mm": [
+        {"x_mm": 260.0, "y_mm": -28.0},
+        {"x_mm": 260.0, "y_mm": 28.0},
+        {"x_mm": 445.0, "y_mm": -28.0},
+        {"x_mm": 445.0, "y_mm": 28.0}
+      ]
+    },
+    "equipment_clear_corridor_width_mm": 44.0,
+    "retention": "M3 bolts clamp the wing; saddle shoulders and spar-aligned bulkheads carry shear and bending",
+    "cad_fit_allowance_each_side_mm": 0.25,
+    "assembly_note": "Use a printed fit coupon before finalizing tube channels and heat-set insert pockets"
+  },
+  "horizontal_tail": {
+    "span_mm": 650.0,
+    "root_le_x_mm": 805.0,
+    "tip_le_x_mm": 827.0,
+    "z_mm": 0.0,
+    "root_chord_mm": 120.0,
+    "tip_chord_mm": 85.0,
+    "airfoil": "naca0010",
+    "elevator_hinge_fraction": 0.70
+  },
+  "vertical_tail": {
+    "height_mm": 275.0,
+    "root_le_x_mm": 805.0,
+    "tip_le_x_mm": 845.0,
+    "root_chord_mm": 125.0,
+    "tip_chord_mm": 75.0,
+    "airfoil": "naca0010",
+    "rudder_hinge_fraction": 0.65
+  },
+  "fuselage": {
+    "length_mm": 960.0,
+    "sections": [
+      {"x_mm": 0.0, "z_mm": 0.0, "width_mm": 10.0, "height_mm": 10.0},
+      {"x_mm": 40.0, "z_mm": 0.0, "width_mm": 55.0, "height_mm": 55.0},
+      {"x_mm": 180.0, "z_mm": 0.0, "width_mm": 75.0, "height_mm": 90.0},
+      {"x_mm": 350.0, "z_mm": 0.0, "width_mm": 80.0, "height_mm": 95.0},
+      {"x_mm": 550.0, "z_mm": 0.0, "width_mm": 60.0, "height_mm": 75.0},
+      {"x_mm": 780.0, "z_mm": 0.0, "width_mm": 35.0, "height_mm": 45.0},
+      {"x_mm": 930.0, "z_mm": 0.0, "width_mm": 18.0, "height_mm": 25.0},
+      {"x_mm": 960.0, "z_mm": 0.0, "width_mm": 5.0, "height_mm": 5.0}
+    ]
+  }
+}

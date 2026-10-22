@@ -1,0 +1,10 @@
+{
+	"autodeskProduct":	"Fusion",
+	"type":	"script",
+	"author":	"Antigravity",
+	"description":	{
+		"":	"Generates V-201 Fuselage and Tail solid bodies."
+	},
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true
+}

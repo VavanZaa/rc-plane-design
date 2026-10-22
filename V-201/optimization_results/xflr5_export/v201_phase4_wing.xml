@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<explane version="1.0">
+  <Plane>
+    <Name>V201_Phase4</Name>
+    <wing>
+      <Name>Main Wing</Name>
+      <Type>MAINWING</Type>
+      <Position>0,0,0</Position>
+      <Tilt_angle>0</Tilt_angle>
+      <Symetric>true</Symetric>
+      <isFin>false</isFin>
+      <isDoubleFin>false</isDoubleFin>
+      <isSymFin>false</isSymFin>
+      <Sections>
+        <Section>
+          <y_position>0.000000</y_position>
+          <Chord>0.250000</Chord>
+          <xOffset>0.000000</xOffset>
+          <Dihedral>0.000000</Dihedral>
+          <Twist>0.000000</Twist>
+          <x_number_of_panels>13</x_number_of_panels>
+          <x_panel_distribution>COSINE</x_panel_distribution>
+          <y_number_of_panels>13</y_number_of_panels>
+          <y_panel_distribution>SINE</y_panel_distribution>
+          <Left_Side_FoilName>V-201 Phase 4 y=0.0 mm</Left_Side_FoilName>
+          <Right_Side_FoilName>V-201 Phase 4 y=0.0 mm</Right_Side_FoilName>
+        </Section>
+        <Section>
+          <y_position>0.175000</y_position>
+          <Chord>0.246172</Chord>
+          <xOffset>0.000957</xOffset>
+          <Dihedral>0.000000</Dihedral>
+          <Twist>-0.071444</Twist>
+          <x_number_of_panels>13</x_number_of_panels>
+          <x_panel_distribution>COSINE</x_panel_distribution>
+          <y_number_of_panels>13</y_number_of_panels>
+          <y_panel_distribution>SINE</y_panel_distribution>
+          <Left_Side_FoilName>V-201 Phase 4 y=175.0 mm</Left_Side_FoilName>
+          <Right_Side_FoilName>V-201 Phase 4 y=175.0 mm</Right_Side_FoilName>
+        </Section>
+        <Section>
+          <y_position>0.350000</y_position>
+          <Chord>0.230625</Chord>
+          <xOffset>0.004844</xOffset>
+          <Dihedral>0.000000</Dihedral>
+          <Twist>-0.650000</Twist>
+          <x_number_of_panels>13</x_number_of_panels>
+          <x_panel_distribution>COSINE</x_panel_distribution>
+          <y_number_of_panels>13</y_number_of_panels>
+          <y_panel_distribution>SINE</y_panel_distribution>
+          <Left_Side_FoilName>V-201 Phase 4 y=350.0 mm</Left_Side_FoilName>
+          <Right_Side_FoilName>V-201 Phase 4 y=350.0 mm</Right_Side_FoilName>
+        </Section>
+        <Section>
+          <y_position>0.500000</y_position>
+          <Chord>0.203353</Chord>
+          <xOffset>0.011662</xOffset>
+          <Dihedral>0.000000</Dihedral>
+          <Twist>-1.000000</Twist>
+          <x_number_of_panels>13</x_number_of_panels>
+          <x_panel_distribution>COSINE</x_panel_distribution>
+          <y_number_of_panels>13</y_number_of_panels>
+          <y_panel_distribution>SINE</y_panel_distribution>
+          <Left_Side_FoilName>V-201 Phase 4 y=500.0 mm</Left_Side_FoilName>
+          <Right_Side_FoilName>V-201 Phase 4 y=500.0 mm</Right_Side_FoilName>
+        </Section>
+        <Section>
+          <y_position>0.600000</y_position>
+          <Chord>0.176006</Chord>
+          <xOffset>0.018499</xOffset>
+          <Dihedral>12.031094</Dihedral>
+          <Twist>-1.644473</Twist>
+          <x_number_of_panels>13</x_number_of_panels>
+          <x_panel_distribution>COSINE</x_panel_distribution>
+          <y_number_of_panels>13</y_number_of_panels>
+          <y_panel_distribution>SINE</y_panel_distribution>
+          <Left_Side_FoilName>V-201 Phase 4 y=600.0 mm</Left_Side_FoilName>
+          <Right_Side_FoilName>V-201 Phase 4 y=600.0 mm</Right_Side_FoilName>
+        </Section>
+        <Section>
+          <y_position>0.650000</y_position>
+          <Chord>0.159156</Chord>
+          <xOffset>0.022711</xOffset>
+          <Dihedral>12.031094</Dihedral>
+          <Twist>-2.100000</Twist>
+          <x_number_of_panels>13</x_number_of_panels>
+          <x_panel_distribution>COSINE</x_panel_distribution>
+          <y_number_of_panels>13</y_number_of_panels>
+          <y_panel_distribution>SINE</y_panel_distribution>
+          <Left_Side_FoilName>V-201 Phase 4 y=650.0 mm</Left_Side_FoilName>
+          <Right_Side_FoilName>V-201 Phase 4 y=650.0 mm</Right_Side_FoilName>
+        </Section>
+        <Section>
+          <y_position>0.700000</y_position>
+          <Chord>0.140000</Chord>
+          <xOffset>0.027500</xOffset>
+          <Dihedral>12.031094</Dihedral>
+          <Twist>-2.500000</Twist>
+          <x_number_of_panels>13</x_number_of_panels>
+          <x_panel_distribution>COSINE</x_panel_distribution>
+          <y_number_of_panels>13</y_number_of_panels>
+          <y_panel_distribution>SINE</y_panel_distribution>
+          <Left_Side_FoilName>V-201 Phase 4 y=700.0 mm</Left_Side_FoilName>
+          <Right_Side_FoilName>V-201 Phase 4 y=700.0 mm</Right_Side_FoilName>
+        </Section>
+      </Sections>
+    </wing>
+  </Plane>
+</explane>

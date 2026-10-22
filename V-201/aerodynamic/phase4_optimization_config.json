@@ -1,0 +1,91 @@
+{
+  "phase": 4,
+  "method": {
+    "airfoil_parameterization": "Kulfan CST with three quadratic spanwise control sets",
+    "planform_parameterization": "cubic Bernstein chord field",
+    "section_aerodynamics": "NeuralFoil",
+    "three_dimensional_aerodynamics": "VortexLatticeMethod",
+    "optimizer": "IPOPT",
+    "linear_solver": "MA97",
+    "optimization_neuralfoil_model": "small",
+    "verification_neuralfoil_model": "large",
+    "n_crit": 5.0
+  },
+  "design_points": [
+    {"name": "takeoff", "speed_m_s": 6.8, "objective_weight": 0.05, "alpha_initial_deg": 7.0, "elevator_limit_deg": 18.0},
+    {"name": "endurance", "speed_m_s": 9.5, "objective_weight": 0.50, "alpha_initial_deg": 3.2, "elevator_limit_deg": 8.0},
+    {"name": "cruise", "speed_m_s": 13.0, "objective_weight": 0.35, "alpha_initial_deg": 1.0, "elevator_limit_deg": 8.0},
+    {"name": "fast_gust", "speed_m_s": 17.0, "objective_weight": 0.10, "alpha_initial_deg": -0.3, "elevator_limit_deg": 8.0}
+  ],
+  "optimization_stations_mm": [0.0, 175.0, 350.0, 500.0, 600.0, 650.0, 700.0],
+  "chord_bounds_mm": [
+    [250.0, 250.0],
+    [240.0, 250.0],
+    [225.0, 240.0],
+    [195.0, 215.0],
+    [170.0, 190.0],
+    [155.0, 172.0],
+    [140.0, 152.0]
+  ],
+  "twist_bounds_deg": [
+    [0.0, 0.0],
+    [-0.4, 0.0],
+    [-1.1, -0.65],
+    [-2.0, -1.0],
+    [-2.6, -1.5],
+    [-3.1, -2.1],
+    [-3.4, -2.5]
+  ],
+  "constraints": {
+    "wing_area_min_m2": 0.300,
+    "wing_area_max_m2": 0.310,
+    "outer_panel_dihedral_min_deg": 10.0,
+    "outer_panel_dihedral_max_deg": 14.0,
+    "root_chord_fixed_mm": 250.0,
+    "root_le_fixed_mm": 230.0,
+    "root_z_fixed_mm": 55.0,
+    "minimum_normalized_thickness": 0.115,
+    "maximum_normalized_thickness": 0.155,
+    "servo_station_mm": 350.0,
+    "servo_depth_min_mm": 32.0,
+    "spar_end_semispan_mm": 500.0,
+    "spar_channel_depth_min_mm": 10.0,
+    "trailing_edge_physical_mm": 0.8,
+    "minimum_neuralfoil_confidence": 0.70,
+    "coarse_vlm_induced_drag_floor_factor": 0.85,
+    "aileron_stall_margin_min_deg": 1.0,
+    "design_load_factor_g": 4.0,
+    "structural_safety_factor": 1.5,
+    "provisional_carbon_bending_allowable_mpa": 300.0,
+    "forward_spar_load_share": 0.65,
+    "rear_spar_load_share": 0.35
+  },
+  "regularization": {
+    "kulfan_weight_delta_limit": 0.040,
+    "shape_weight": 0.010,
+    "planform_weight": 0.003,
+    "twist_smoothness_weight": 0.001,
+    "dihedral_weight": 0.001
+  },
+  "verification": {
+    "vlm_meshes": [
+      {"name": "coarse", "spanwise_resolution": 1, "chordwise_resolution": 5},
+      {"name": "medium", "spanwise_resolution": 3, "chordwise_resolution": 8},
+      {"name": "high", "spanwise_resolution": 6, "chordwise_resolution": 12}
+    ],
+    "medium_high_total_drag_difference_max_percent": 3.0,
+    "medium_high_induced_drag_difference_max_percent": 7.0,
+    "section_stall_scan_min_deg": -4.0,
+    "section_stall_scan_max_deg": 22.0,
+    "section_stall_scan_step_deg": 0.5,
+    "takeoff_ground_roll": {
+      "maximum_runway_m": 5.0,
+      "asphalt_rolling_resistance_coefficient": 0.04,
+      "average_thrust_fraction_of_static": 0.85,
+      "average_drag_fraction_of_rotation_drag": 0.50,
+      "conservative_3d_clmax_fraction_of_min_section_clmax": 0.90,
+      "minimum_rotation_to_stall_speed_ratio": 1.05,
+      "approach_to_stall_speed_ratio": 1.25
+    }
+  }
+}

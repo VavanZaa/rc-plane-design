@@ -1,0 +1,10 @@
+{
+	"autodeskProduct":	"Fusion",
+	"type":	"script",
+	"author":	"Antigravity",
+	"description":	{
+		"":	"Imports V-201 optimized wing geometry and generates lofted body."
+	},
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true
+}
